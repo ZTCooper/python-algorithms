@@ -100,3 +100,8 @@ W = [[  0,   2,   1,   3,   9,   4, inf, inf],	#a
 #>>> sum(1 for w in W[a] if w < inf) - 1	#Degree
 #5
 #这里记得-1，因为不算对角线！
+
+
+#N = [[0]*10 for i in range(10)]
+import Numpy as np
+N = np.zeros([10, 10])
