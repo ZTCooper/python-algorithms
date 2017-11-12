@@ -33,3 +33,7 @@ def max_perm(M):
 			Q.append(j)		#deal with j
 	return A
 #算法复杂度：线性级
+
+if __name__ == "__main__":
+	print(naive_max_perm(M))
+	print(max_perm(M))

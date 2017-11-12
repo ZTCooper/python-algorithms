@@ -1,4 +1,4 @@
-#递归插入排序
+#递归插入排序（稳定）
 def ins_sort_rec(seq, i):
 	if i == 0:
 		return
@@ -18,7 +18,7 @@ def ins_sort(seq):
 			j -= 1
 	return seq
 
-#递归选择排序
+#递归选择排序（不稳定）
 def sel_sort_rec(seq, i):
 	if i == 0:
 		return
@@ -32,7 +32,7 @@ def sel_sort_rec(seq, i):
 
 #选择排序
 def sel_sort(seq):
-	for i in range(len(seq)-1,0,-1):
+	for i in range(len(seq)-1,0,-1):	#从后向前
 		max_j = i
 		for j in range(i):
 			if seq[j] > seq[max_j]:
