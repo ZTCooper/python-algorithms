@@ -23,6 +23,31 @@ def walk(G, s, S = set()):		#walk graph G from node s
 			P[v] = u			#predecessor of v
 	return P 					#trversal tree
 
+
+G2 = {
+	0:{1, 2},
+	1:{0, 2},
+	2:{0, 1},
+	3:{4, 5},
+	4:{3, 5},
+	5:{3, 4}
+}
+
+#找出图的连通分量
+def components(G):
+	comp = []			#components
+	seen = set()		#nodes already seen
+	for u in G:			
+		if u in seen:
+			continue
+		C = walk(G, u)	#traverse component
+		#print(C)
+		seen.update(C)	#add keys of C to seen
+		comp.append(C)	#add one component
+	#print(comp)
+	return comp
+
 if __name__ == "__main__":
 	print(list(walk(G1, a)))	#traversal tree -> list
+	print([list(sorted(C)) for C in components(G2)])	#dict -> list
 	
